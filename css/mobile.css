@@ -17,7 +17,8 @@ h3 {
 }
 
 p {
-  margin: 0;
+  margin-top: 0;
+  margin-bottom: 0;
 }
 
 img {
@@ -36,6 +37,7 @@ img {
   margin-left: auto;
   margin-right: auto;
   max-width: 320px;
+  
   
 }
 
@@ -195,6 +197,10 @@ img {
 
   .mobile_btn {
     display: none; 
+  }
+
+  .mobile_menu {
+    display: none;
   }
   
   .logo_navigation {
@@ -716,12 +722,17 @@ background-image: linear-gradient(rgba(46, 47, 66, 0.7),
   line-height: 1.5;
   letter-spacing: 0.02em;
 }
+
+.overlay {
+  width: 288px;
+}
  
 .overlay_text {
   display: none;
 }
 
 .portfolio_item {
+  width: 288px;
   border: 1px solid #F4F4FD;
   box-shadow: 0px 2px 1px 0px rgba(46, 47, 66, 0.08),
    0px 1px 1px 0px rgba(46, 47, 66, 0.16), 
@@ -733,6 +744,10 @@ background-image: linear-gradient(rgba(46, 47, 66, 0.7),
   margin-bottom: 48px;
 }
 
+.portfolio_photo {
+  width: 100%;
+}
+
 .portfolio_text_container {
   padding: 32px 16px; 
 }
@@ -740,29 +755,39 @@ background-image: linear-gradient(rgba(46, 47, 66, 0.7),
 /*---tablet768---*/
 
 @media screen and (min-width: 768px) {
-    .portfolio_list {
-    display: flex;
-    flex-wrap: wrap;
-    column-gap: 24px;
-    row-gap: 72px;
-  }
-  
-    .portfolio_item {
-    width: calc((100% - 24px) / 2);
-  }
-    .portfolio_item:not(:last-child) {
-    margin-bottom: 0;
+  .portfolio_list {
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 24px;
+  row-gap: 72px;
 }
+  
+  .portfolio_item {
+  width: calc((100% - 24px) / 2);
+}
+  .portfolio_item:not(:last-child) {
+  margin-bottom: 0;
+}
+
+.overlay {
+  width: 356px;
+}
+ 
+.portfolio_photo {
+  height: 300px;
+}
+
 }
 
 /*---1158---*/
 
 @media screen and (min-width: 1158px) {
   .portfolio_section {
-   padding: 120px 0;
+  padding: 120px 0;
 }
  
 .overlay {
+  width: 360px;
   position: relative;
   overflow: hidden;
 }
@@ -782,6 +807,10 @@ background-image: linear-gradient(rgba(46, 47, 66, 0.7),
   position: absolute;
   transform: translateY(100%);
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.portfolio_list {
+  row-gap: 48px;
 }
 
  .portfolio_item {
@@ -810,10 +839,6 @@ background-image: linear-gradient(rgba(46, 47, 66, 0.7),
   gap: 8px;
   align-self: stretch;
   border-top: none;
-}
-
-.portfolio_list {
- row-gap: 48px;
 }
 }
 /*#endregion*/
